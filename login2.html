@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+       
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>  TechTutors Responsive Login and Signup Form </title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/style.css">
+                
+        <!-- Boxicons CSS -->
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+                        
+    </head>
+    <body>
+        <section class="container forms">
+           
+            <div class="form login">
+                <div class="form-content">
+                    <header>Login</header>
+                    <form action="#">
+                        <div class="field input-field">
+                            <input type="email" placeholder="Email" class="input">
+                        </div>
+
+                        <div class="field input-field">
+                            <input type="password" placeholder="Password" class="password">
+                            <i class='bx bx-hide eye-icon'></i>
+                        </div>
+
+                        <div class="form-link">
+                            <a href="#" class="forgot-pass">Forgot password?</a>
+                        </div>
+
+                        <div class="field button-field">
+                            <button>Login</button>
+                        </div>
+                        <div class="field button-field">
+                            <a href="index.html"> <button type="button" onclick="goBack()">Back</button></a>
+
+                        </div>
+                    </form>
+
+                    <div class="form-link">
+                        <span>Don't have an account? <a href="#" class="link signup-link">Signup</a></span>
+                    </div>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="media-options">
+                    <a href="index.html" class="field facebook">
+                       
+                        <span>Login with Facebook</span>
+                    </a>
+                </div>
+                <div class="media-options">
+                    <a href="#" class="field google">
+                       
+                        <span>Login with Google</span>
+                    </a>
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- Signup Form -->
+
+            <div class="form signup">
+                <div class="form-content">
+                    <header>Signup</header>
+                    <form action="#">
+                        <div class="field input-field">
+                            <input type="email" placeholder="Email" class="input">
+                        </div>
+
+                        <div class="field input-field">
+                            <input type="password" placeholder="Create password" class="password">
+                        </div>
+
+                        <div class="field input-field">
+                            <input type="password" placeholder="Confirm password" class="password">
+                            <i class='bx bx-hide eye-icon'></i>
+                        </div>
+
+                        <div class="field button-field">
+                            <button>Signup</button>
+                        </div>
+                        <div class="field button-field">
+                           <a href="index.html"> <button type="button" onclick="goBack()">Back</button></a>
+                        </div>
+                    </form>
+
+                    <div class="form-link">
+                        <span>Already have an account? <a href="#" class="link login-link">Login</a></span>
+                    </div>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="media-options">
+                    <a href="#" class="field facebook">
+                        
+                        <span>Login with Facebook</span>
+                    </a>
+                </div>
+
+                <div class="media-options">
+                    <a href="#" class="field google">
+                      
+                        <span>Login with Google</span>
+                    </a>
+                </div>
+            </div>
+
+        
+        </section>
+
+        <!-- JavaScript -->
+        <script src="js/script.js"></script>
+    </body>
+</html>
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
+
+<style>.field.button-field button[type="button"] {
+    background-color: #626f70; /* Background color of the button */
+    color: rgb(255, 255, 255); /* Text color */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Adjust padding as needed */
+    border-radius: 5px; /* Optional: adds rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.field.button-field button[type="button"]:hover {
+    background-color: #026c75; /* Darker red color on hover */
+}
+</style>
+
+
+
+<style>/* Google Fonts - Poppins */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+
+    
+    .container {
+        background: url('img/ew.jpg') no-repeat center center fixed;
+        background-size: cover;
+        height: 130vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #026c75;
+        column-gap: 30px;
+    }
+    
+    .form {
+        position: absolute;
+        max-width: 430px;
+        width: 100%;
+        padding: 30px;
+        border-radius: 6px;
+        background: #FFF;
+    }
+    
+    .form.signup {
+        opacity: 0;
+        pointer-events: none;
+    }
+    
+    .forms.show-signup .form.signup {
+        opacity: 1;
+        pointer-events: auto;
+    }
+    
+    .forms.show-signup .form.login {
+        opacity: 0;
+        pointer-events: none;
+    }
+    
+    header {
+        font-size: 28px;
+        font-weight: 600;
+        color: #232836;
+        text-align: center;
+    }
+    
+    form {
+        margin-top: 30px;
+    }
+    
+    .field {
+        position: relative;
+        height: 50px;
+        width: 100%;
+        margin-top: 20px;
+        border-radius: 6px;
+    }
+    
+    .field input,
+    .field button {
+        height: 100%;
+        width: 100%;
+        border: none;
+        font-size: 16px;
+        font-weight: 400;
+        border-radius: 6px;
+    }
+    
+    .field input {
+        outline: none;
+        padding: 0 15px;
+        border: 1px solid #CACACA;
+    }
+    
+    .field input:focus {
+        border-bottom-width: 2px;
+    }
+    
+    .eye-icon {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        font-size: 18px;
+        color: #8b8b8b;
+        cursor: pointer;
+        padding: 5px;
+    }
+    
+    .field button {
+        color: #fff;
+        background-color: #026c75;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+    
+    .field button:hover {
+        background-color: #015a5e;
+    }
+    
+    .form-link {
+        text-align: center;
+        margin-top: 10px;
+    }
+    
+    .form-link span,
+    .form-link a {
+        font-size: 14px;
+        font-weight: 400;
+        color: #232836;
+    }
+    
+    .form a {
+        color: #026c75;
+        text-decoration: none;
+    }
+    
+    .form-content a:hover {
+        text-decoration: underline;
+    }
+    
+    .line {
+        position: relative;
+        height: 1px;
+        width: 100%;
+        margin: 36px 0;
+        background-color: #d4d4d4;
+    }
+    
+    .line::before {
+        content: 'Or';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #FFF;
+        color: #8b8b8b;
+        padding: 0 15px;
+    }
+    
+    .media-options a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    a.facebook {
+        color: #fff;
+        background-color: #026c75;
+    }
+    
+    a.facebook .facebook-icon {
+        height: 28px;
+        width: 28px;
+        color: #026c75;
+        font-size: 20px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        margin-right: 20px;
+    }
+    
+ /* Google Login Button Styles */
+
+/* Google Login Button Styles */
+.media-options a.google {
+    color: #fff;
+    background-color: #026c75;
+}
+
+/* Google Icon Styles */
+
+
+/* Google Icon Styles */
+.google-icon {
+    height: 28px;
+    width: 28px;
+    color: #026c75;
+    font-size: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    margin-right: 20px;
+}
+
+
+    
+    @media screen and (max-width: 400px) {
+        .form {
+            padding: 20px 10px;
+        }
+    }
+    
+    </style>
+
+
+
+<script> const forms = document.querySelector(".forms"),
+      pwShowHide = document.querySelectorAll(".eye-icon"),
+      links = document.querySelectorAll(".link");
+
+pwShowHide.forEach(eyeIcon => {
+    eyeIcon.addEventListener("click", () => {
+        let pwFields = eyeIcon.parentElement.parentElement.querySelectorAll(".password");
+        
+        pwFields.forEach(password => {
+            if(password.type === "password"){
+                password.type = "text";
+                eyeIcon.classList.replace("bx-hide", "bx-show");
+                return;
+            }
+            password.type = "password";
+            eyeIcon.classList.replace("bx-show", "bx-hide");
+        })
+        
+    })
+})      
+
+links.forEach(link => {
+    link.addEventListener("click", e => {
+       e.preventDefault(); //preventing form submit
+       forms.classList.toggle("show-signup");
+    })
+})</script>
+
+
+
+
+<script>
+    function goBack() {
+      window.history.back();
+    }
+
+
+    // Select the login and signup buttons
+const loginButton = document.querySelector(".login .button-field button");
+const signupButton = document.querySelector(".signup .button-field button");
+
+// Add event listeners to display success messages
+loginButton.addEventListener("click", (e) => {
+    e.preventDefault(); // Prevent actual form submission
+    alert("Login Successful");
+});
+
+signupButton.addEventListener("click", (e) => {
+    e.preventDefault(); // Prevent actual form submission
+    alert("Signup Successful");
+});
+    </script>

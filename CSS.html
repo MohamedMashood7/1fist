@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> TechTutors Video Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button class="back-btn" onclick="goBack()">Back</button>
+    <header>
+        <h1>Welcome to the CSS Video Gallery</h1>
+        <p>Explore our collection of videos below. Each video comes with a brief description and a download option.</p>
+    </header>
+    <div class="video-container">
+        <div class="video-card">
+            <iframe src="https://drive.google.com/file/d/1_4JUMgd5TYtP0sokbQiFbrDWH4IL5jOk/preview" width="300" height="200" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <h3>CSS Tutorial for Beginners | Guide to Understand the CSS Box Model and Layout</h3>
+            
+            <a href="https://drive.google.com/uc?export=download&id=1_4JUMgd5TYtP0sokbQiFbrDWH4IL5jOk" download="video1.mp4">Download</a>
+        </div>
+        
+        <div class="video-card">
+            <iframe src="https://drive.google.com/file/d/1Gc6LGS3SMjNYQp_hcAUgHld7yN9NneVd/preview" width="300" height="200" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <h3>CSS Positioning Made Simple: A Beginner-Friendly Tutorial</h3>
+           
+            <a href="https://drive.google.com/uc?export=download&id=1Gc6LGS3SMjNYQp_hcAUgHld7yN9NneVd" download="video2.mp4">Download</a>
+        </div>
+        <div class="video-card">
+            <iframe src="https://drive.google.com/file/d/19-dfkEn2lgBxxKseBpwTw7Nsyq-XYCSw/preview" width="300" height="200" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <h3>CSS Media Queries Explained in Tamil | Responsive Web Development Tutorial</h3>
+           
+            <a href="https://drive.google.com/uc?export=download&id=19-dfkEn2lgBxxKseBpwTw7Nsyq-XYCSw" download="video3.mp4">Download</a>
+        </div>
+        
+       
+    </div>
+
+  
+</body>
+</html>
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 20px;
+    height: 100vh;
+    
+}
+/*=============================================*/
+.video-wrapper {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    
+}
+
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px; /* Adjust size to cover the button */
+    height: 40px;
+    background-color: transparent;
+    cursor: default;
+    z-index: 2;
+   
+}
+
+/*=============================================*/
+
+
+.back-btn {
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: #026c75;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  header h1, header p {
+    color: #026c75; /* Apply the specified color */
+}
+
+header {
+    text-align: center; /* Center align the header content */
+    margin-bottom: 20px;
+}
+
+
+
+
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    margin-left: 40px;
+}
+
+.video-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 300px;
+    text-align: center;
+}
+
+.video-card video {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.video-card h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.video-card p {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.video-card a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #026c75;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.video-card a:hover {
+    background-color: #258992;
+}
+
+
+
+</style>
+
+
+
+
+
+<script>
+    function goBack() {
+      window.history.back();
+    }
+  
+    function downloadVideo(videoSrc) {
+      var a = document.createElement('a');
+      a.href = videoSrc;
+      a.download = videoSrc.substring(videoSrc.lastIndexOf('/') + 1);
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }
+  </script>

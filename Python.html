@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> TechTutors Video Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button class="back-btn" onclick="goBack()">Back</button>
+    <header>
+        <h1>Welcome to the Python Video Gallery</h1>
+        <p>Explore our collection of videos below. Each video comes with a brief description and a download option.</p>
+    </header>
+    <div class="video-container">
+        
+
+        <div class="video-card">
+            <iframe src="https://drive.google.com/file/d/1EiYbq7ZCPZ1eHZ_LpKPpHMI4PyKTt01I/preview" width="300" height="200" allowfullscreen></iframe>
+            <h3>Python Programming - 1 | Introduction            </h3>
+            <a href="https://drive.google.com/uc?export=download&id=1EiYbq7ZCPZ1eHZ_LpKPpHMI4PyKTt01I" download="video2.mp4">Download</a>
+        </div>
+        
+        <div class="video-card">
+            <iframe src="https://drive.google.com/file/d/1FYF8crQbiLDJAREQW2sAWI-Aiv-Ym6Cn/preview" width="300" height="200" allow="autoplay"></iframe>
+            <h3>Python Programming - 2 | Simple Print Statement </h3> 
+            <a href="https://drive.google.com/uc?export=download&id=1FYF8crQbiLDJAREQW2sAWI-Aiv-Ym6Cn" download="video3.mp4">Download</a>
+        </div> 
+
+        <div class="video-card">
+            <iframe src="https://drive.google.com/file/d/1TiQ255EAylcshernvNnLbnpdhGEaOd2a/preview" width="300" height="200" allow="autoplay"></iframe>
+            <h3>Python Programming - 3 | Variables & Datatypes</h3>
+            <a href="https://drive.google.com/uc?export=download&id=1TiQ255EAylcshernvNnLbnpdhGEaOd2a" download="video1.mp4">Download</a>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://drive.google.com/file/d/1IqGzYCfpFTBGh-N8EuSkNZcNxWmMUolf/preview" width="300" height="200" allow="autoplay"></iframe>
+            <h3>Python Programming - 4 | String Functions</h3>
+            <a href="https://drive.google.com/uc?export=download&id=1IqGzYCfpFTBGh-N8EuSkNZcNxWmMUolf" download="video4.mp4">Download</a>
+        </div>
+        
+        <div class="video-card">
+            <iframe src="https://drive.google.com/file/d/1RFQQ8Ze-qHqtk8UYtDWtSTbSrPy-M8B1/preview" width="300" height="200" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <h3>Python Programming - 5 | Using Numbers </h3>
+            <a href="https://drive.google.com/uc?export=download&id=1RFQQ8Ze-qHqtk8UYtDWtSTbSrPy-M8B1" download="video5.mp4">Download</a>
+        </div>
+        
+        <div class="video-card">
+            <iframe src="https://drive.google.com/file/d/18OoYFweGsBE7U94joCZOONc6iqEAGwf4/preview" width="300" height="200" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <h3>Python Programming - 6 | Getting Input From User</h3>
+            <a href="https://drive.google.com/uc?export=download&id=18OoYFweGsBE7U94joCZOONc6iqEAGwf4" download="video6.mp4">Download</a>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://drive.google.com/file/d/1Fj1fiKYNUQJavXBd7VmniXvT8RXen5YY/preview" width="300" height="200" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <h3>Python Programming - 7 | Building Simple Calculator`</h3>
+            
+            <a href="https://drive.google.com/uc?export=download&id=1Fj1fiKYNUQJavXBd7VmniXvT8RXen5YY" download="video7.mp4">Download</a>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://drive.google.com/file/d/1GvBB-r3mtJx1PelU5oQnCZY_QvpTIS9e/preview" width="300" height="200" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <h3>Python Programming - 8 | List or Array </h3>
+            
+            <a href="https://drive.google.com/uc?export=download&id=1GvBB-r3mtJx1PelU5oQnCZY_QvpTIS9e" download="video8.mp4">Download</a>
+        </div>
+        
+        <div class="video-card">
+            <iframe src="https://drive.google.com/file/d/1GvBB-r3mtJx1PelU5oQnCZY_QvpTIS9e/preview" width="300" height="200" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <h3>Python Programming - 9 | List Functions</h3>
+          
+            <a href="https://drive.google.com/uc?export=download&id=1GvBB-r3mtJx1PelU5oQnCZY_QvpTIS9e" download="video8.mp4">Download</a>
+        </div>
+           
+    </div>
+
+  
+</body>
+</html>
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 20px;
+    height: 220vh;
+    
+}
+/*=============================================*/
+.video-wrapper {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    
+}
+
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px; /* Adjust size to cover the button */
+    height: 40px;
+    background-color: transparent;
+    cursor: default;
+    z-index: 2;
+   
+}
+
+/*=============================================*/
+
+
+.back-btn {
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: #026c75;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  header h1, header p {
+    color: #026c75; /* Apply the specified color */
+}
+
+header {
+    text-align: center; /* Center align the header content */
+    margin-bottom: 20px;
+}
+
+
+
+
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    margin-left: 40px;
+}
+
+.video-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 300px;
+    text-align: center;
+}
+
+.video-card video {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.video-card h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.video-card p {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.video-card a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #026c75;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.video-card a:hover {
+    background-color: #258992;
+}
+
+
+
+</style>
+
+
+
+
+
+<script>
+    function goBack() {
+      window.history.back();
+    }
+  
+    function downloadVideo(videoSrc) {
+      var a = document.createElement('a');
+      a.href = videoSrc;
+      a.download = videoSrc.substring(videoSrc.lastIndexOf('/') + 1);
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }
+  </script>
